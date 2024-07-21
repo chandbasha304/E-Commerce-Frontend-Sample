@@ -53,11 +53,44 @@
     <div>
       <form id="formdata">
         <div id="ab">
-          <input type="text" placeholder="Enter Your Username" />
-          <input type="password" placeholder="Enter Your Password" />
+          <input
+            type="text"
+            name="username"
+            placeholder="Enter Your Username"
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter Your Password"
+          />
           <button>Login</button>
         </div>
       </form>
     </div>
   </body>
 </html>
+<script>
+  document.getElementById("formdata").addEventListener("submit", function () {
+    event.preventDefault();
+    console.log(event.target);
+    const formData = new FormData(event.target);
+    const username = formData.get("username");
+    const password = formData.get("password");
+
+    let userData = {
+      username: username,
+      password: password,
+    };
+
+    let userListData = JSON.parse(localStorage.getItem("user"));
+
+    let checkUser = userListData.filter((item) => {
+      return (
+        item.username === userData.username &&
+        item.password === userData.password
+      );
+    });
+    if (checkUser) {
+    }
+  });
+</script>
