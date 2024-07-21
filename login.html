@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f2f5;
+        font-family: Arial, sans-serif;
+      }
+      #formdata {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(23, 14, 14, 0.1);
+        padding: 40px;
+        width: 300px;
+        display: flex;
+
+        justify-content: center;
+      }
+      #formdata input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+      #formdata button {
+        width: 100%;
+        padding: 10px;
+        background-color: #1877f2;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      #formdata button:hover {
+        background-color: #155bcb;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <form id="formdata">
+        <div id="ab">
+          <input type="text" placeholder="Enter Your Username" />
+          <input type="password" placeholder="Enter Your Password" />
+          <button>Login</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
